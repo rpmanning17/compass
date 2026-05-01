@@ -2,7 +2,7 @@
 
 **Status:** Active
 **Created:** May 1, 2026
-**Last updated:** May 1, 2026 (added VS Code + GitHub mobile app; Vercel pending)
+**Last updated:** May 1, 2026 (Phase 1 complete; removed GitHub mobile app per §8 deviation; Vercel pending)
 **Owner:** [Your name]
 **Source of truth hierarchy:** GitHub repo `PLAN.md` > Cowork project copy > Claude chat project copy > Google Drive backup
 
@@ -68,7 +68,6 @@ The AI configuration that lives inside the repo and the Cowork project:
 | **VS Code** | Editor host for Claude Code and Codex CLI (terminal lives inside it); Agent Sessions view (1.109+) shows both agents side by side; manual file inspection and edits |
 | **Figma** | Design surface, stakeholder collaboration, Code Connect handoff |
 | **GitHub (web)** | Repo hosting, Storybook deploy via Pages, PR-based review trail |
-| **GitHub mobile app** | Reviewing PRs and issues from phone; useful once agents start opening PRs you need to glance at |
 | **Google Drive** | Backup of plan doc; final polished client deliverables |
 | **Hosting (Vercel?)** | TBD — see Decisions Log pending entry |
 
@@ -87,7 +86,6 @@ The AI configuration that lives inside the repo and the Cowork project:
 - If you're about to **generate a prototype, deck, or mockup**, you belong in Claude Design.
 - If you're about to **build or edit a Figma component**, you belong in Figma itself, with Claude chat open as a guide.
 - If you're about to **synthesize research, organize files, or run a recurring deliverable**, you belong in Cowork.
-- If you're about to **review a PR on the go**, GitHub mobile.
 
 **Anti-pattern:** defaulting to chat out of habit. Chat cannot create files, run code, or modify Figma. If you're in chat doing anything other than thinking or deciding, you're in the wrong tool.
 
@@ -117,7 +115,6 @@ Each phase has: a goal, the tool(s) it happens in, inputs required, outputs prod
   - `PLAN.md`, `README.md`, `.gitignore`, `LICENSE` (MIT) committed
   - VS Code installed (if not already)
   - Claude Code installed via `npm install -g @anthropic-ai/claude-code`
-  - GitHub mobile app installed and signed in
   - Cowork project created for ongoing work; `PLAN.md` copy added
 - **Success criteria:**
   - Repo visible on GitHub with initial commit
@@ -231,7 +228,6 @@ Record every foundational decision and every deviation from this plan. Format: d
 | 2026-05-01 | **Framework: React + TypeScript** | Broadest consumption across employers; strongest tooling ecosystem; native Storybook support; works with Code Connect; matches the most common engineering stack at target clients. | Claude chat (recommendation accepted) |
 | 2026-05-01 | **Repo visibility: Public** | Functions as a portfolio asset; shareable with prospective employers; lower friction for collaborators; reinforces "owned by you, not by any employer" principle. No proprietary client work will live in this repo. | Claude chat |
 | 2026-05-01 | **Add VS Code to tool inventory** | VS Code 1.109+ has unified Agent Sessions view for Claude + Codex; standard editor host for the terminals where both agents run; needed for manual file inspection. | Conversation with Leann (informal) |
-| 2026-05-01 | **Add GitHub mobile app to tool inventory** | Lightweight access for PR review on the go; especially valuable once Agent HQ is in play and agents are opening PRs. | Conversation with Leann (informal) |
 
 ### Pending decisions
 
@@ -240,11 +236,10 @@ Record every foundational decision and every deviation from this plan. Format: d
 | 2026-05-01 | **Storybook hosting: GitHub Pages or Vercel?** | Pages is free, zero extra service, lives with the repo. Vercel adds preview deploys per PR, faster CDN, but adds an account/integration to maintain across employers. Question: what is being deployed beyond Storybook (e.g., live prototype demos, a docs site)? If Storybook only, Pages wins on simplicity; if more, Vercel may be worth it. | You | Before Phase 4 |
 
 ### Deviations from plan
-*(empty — populate when the plan changes mid-phase)*
 
 | Date | Phase | What changed | Why |
 |------|-------|--------------|-----|
-| | | | |
+| 2026-05-01 | Phase 1 | Removed GitHub mobile app references from Tool Inventory (§4), Tool Selection guidance (§5), Phase 1 outputs (§6), and Decisions Log (§8). | Original mobile-app entry was based on a misremembered conversation with Leann — Leann referenced GitHub Desktop, not mobile. Decided not to add Desktop in its place either; existing stack (Claude Code, Codex CLI, VS Code, terminal git) covers all needed git operations. |
 
 ---
 
