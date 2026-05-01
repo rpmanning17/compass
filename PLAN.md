@@ -2,7 +2,7 @@
 
 **Status:** Active
 **Created:** May 1, 2026
-**Last updated:** May 1, 2026 (Phase 1 complete; removed GitHub mobile app per §8 deviation; Vercel pending)
+**Last updated:** May 1, 2026 (Phase 1 complete; removed GitHub mobile app per §8 deviation; hosting decision recorded — Vercel)
 **Owner:** [Your name]
 **Source of truth hierarchy:** GitHub repo `PLAN.md` > Cowork project copy > Claude chat project copy > Google Drive backup
 
@@ -67,9 +67,9 @@ The AI configuration that lives inside the repo and the Cowork project:
 | **ChatGPT (web)** | Second-opinion on plans before committing; red-teaming proposals |
 | **VS Code** | Editor host for Claude Code and Codex CLI (terminal lives inside it); Agent Sessions view (1.109+) shows both agents side by side; manual file inspection and edits |
 | **Figma** | Design surface, stakeholder collaboration, Code Connect handoff |
-| **GitHub (web)** | Repo hosting, Storybook deploy via Pages, PR-based review trail |
+| **GitHub (web)** | Repo hosting; PR-based review trail |
 | **Google Drive** | Backup of plan doc; final polished client deliverables |
-| **Hosting (Vercel?)** | TBD — see Decisions Log pending entry |
+| **Vercel** | Deployment for Storybook and any future docs/demos; preview deploys per PR; hooked into the GitHub repo |
 
 ---
 
@@ -154,8 +154,8 @@ Each phase has: a goal, the tool(s) it happens in, inputs required, outputs prod
 - **Inputs:** Components from Phase 3
 - **Outputs:**
   - Storybook configured with all components
-  - Storybook deployed to a public URL (GitHub Pages by default; Vercel pending decision — see Section 8)
-  - GitHub Action handles deploy on merge to main
+  - Storybook deployed to a public URL via Vercel
+  - Vercel auto-deploys main to production; PRs get preview URLs
   - `README.md` covers: what this is, how to install, how to contribute, how to consume tokens, how to consume components
   - `CONTRIBUTING.md` covers: branch naming, PR conventions, AI agent usage rules
 - **Success criteria:**
@@ -228,12 +228,11 @@ Record every foundational decision and every deviation from this plan. Format: d
 | 2026-05-01 | **Framework: React + TypeScript** | Broadest consumption across employers; strongest tooling ecosystem; native Storybook support; works with Code Connect; matches the most common engineering stack at target clients. | Claude chat (recommendation accepted) |
 | 2026-05-01 | **Repo visibility: Public** | Functions as a portfolio asset; shareable with prospective employers; lower friction for collaborators; reinforces "owned by you, not by any employer" principle. No proprietary client work will live in this repo. | Claude chat |
 | 2026-05-01 | **Add VS Code to tool inventory** | VS Code 1.109+ has unified Agent Sessions view for Claude + Codex; standard editor host for the terminals where both agents run; needed for manual file inspection. | Conversation with Leann (informal) |
+| 2026-05-01 | **Hosting: Vercel** | Owner anticipates deploying more than just Storybook (docs site, possible portfolio landing page, prototype demos). Vercel's preview-per-PR and CDN justify the extra account vs. GitHub Pages. Cost: one more service to maintain across employer engagements; mitigated by Vercel's free hobby tier covering this kind of usage. | Claude chat |
 
 ### Pending decisions
 
-| Date raised | Decision | Context | Owner | Resolve by |
-|-------------|----------|---------|-------|------------|
-| 2026-05-01 | **Storybook hosting: GitHub Pages or Vercel?** | Pages is free, zero extra service, lives with the repo. Vercel adds preview deploys per PR, faster CDN, but adds an account/integration to maintain across employers. Question: what is being deployed beyond Storybook (e.g., live prototype demos, a docs site)? If Storybook only, Pages wins on simplicity; if more, Vercel may be worth it. | You | Before Phase 4 |
+*(empty — populate when new decisions are raised)*
 
 ### Deviations from plan
 
