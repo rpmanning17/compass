@@ -1,0 +1,15 @@
+{
+  "text": {
+    "primary":    { "$value": "{color.gray.900}",    "$type": "color" },
+    "secondary":  { "$value": "{color.gray.600}",    "$type": "color" },
+    "tertiary":   { "$value": "{color.gray.500}",    "$type": "color" },
+    "disabled":   { "$value": "{color.gray.400}",    "$type": "color" },
+    "inverse":    { "$value": "{color.gray.50}",     "$type": "color" },
+    "link":       { "$value": "{color.indigo.600}",  "$type": "color" },
+    "link-hover": { "$value": "{color.indigo.700}",  "$type": "color" },
+    "success":    { "$value": "{color.success.700}", "$type": "color" },
+    "danger":     { "$value": "{color.danger.700}",  "$type": "color" },
+    "warning":    { "$value": "{color.warning.700}", "$type": "color" },
+    "info":       { "$value": "{color.info.700}",    "$type": "color" }
+  }
+}

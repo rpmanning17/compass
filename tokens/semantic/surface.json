@@ -1,0 +1,11 @@
+{
+  "surface": {
+    "page":     { "$value": "{color.gray.50}",        "$type": "color" },
+    "default":  { "$value": "{color.white}",          "$type": "color" },
+    "subtle":   { "$value": "{color.gray.50}",        "$type": "color" },
+    "muted":    { "$value": "{color.gray.100}",       "$type": "color" },
+    "elevated": { "$value": "{color.white}",          "$type": "color" },
+    "inverse":  { "$value": "{color.gray.900}",       "$type": "color" },
+    "overlay":  { "$value": "rgba(15, 23, 42, 0.5)",  "$type": "color" }
+  }
+}
