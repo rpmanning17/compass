@@ -1,11 +1,39 @@
 {
   "surface": {
-    "page":     { "$value": "{color.gray.50}",        "$type": "color" },
-    "default":  { "$value": "{color.white}",          "$type": "color" },
-    "subtle":   { "$value": "{color.gray.50}",        "$type": "color" },
-    "muted":    { "$value": "{color.gray.100}",       "$type": "color" },
-    "elevated": { "$value": "{color.white}",          "$type": "color" },
-    "inverse":  { "$value": "{color.gray.900}",       "$type": "color" },
-    "overlay":  { "$value": "rgba(15, 23, 42, 0.5)",  "$type": "color" }
+    "page": {
+      "$value": "{color.gray.50}",
+      "$type": "color",
+      "$description": "Page background — the outermost container surface."
+    },
+    "default": {
+      "$value": "{color.white}",
+      "$type": "color",
+      "$description": "Default neutral surface — primary content background."
+    },
+    "subtle": {
+      "$value": "{color.gray.50}",
+      "$type": "color",
+      "$description": "Subtle elevation — slight differentiation from the page surface."
+    },
+    "muted": {
+      "$value": "{color.gray.100}",
+      "$type": "color",
+      "$description": "Muted surface — for inactive or secondary regions."
+    },
+    "elevated": {
+      "$value": "{color.white}",
+      "$type": "color",
+      "$description": "Elevated surface for cards and popovers; pair with shadow.sm or shadow.md."
+    },
+    "inverse": {
+      "$value": "{color.gray.900}",
+      "$type": "color",
+      "$description": "Inverse or dark surface for inverted-theme content."
+    },
+    "overlay": {
+      "$value": "rgba(15, 23, 42, 0.5)",
+      "$type": "color",
+      "$description": "Modal scrim — gray.900 at 50% alpha, hardcoded pending alias-plus-alpha transform (see PLAN.md §8)."
+    }
   }
 }

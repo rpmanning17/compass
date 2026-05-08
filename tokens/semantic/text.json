@@ -1,15 +1,59 @@
 {
   "text": {
-    "primary":    { "$value": "{color.gray.900}",    "$type": "color" },
-    "secondary":  { "$value": "{color.gray.600}",    "$type": "color" },
-    "tertiary":   { "$value": "{color.gray.500}",    "$type": "color" },
-    "disabled":   { "$value": "{color.gray.400}",    "$type": "color" },
-    "inverse":    { "$value": "{color.gray.50}",     "$type": "color" },
-    "link":       { "$value": "{color.indigo.600}",  "$type": "color" },
-    "link-hover": { "$value": "{color.indigo.700}",  "$type": "color" },
-    "success":    { "$value": "{color.success.700}", "$type": "color" },
-    "danger":     { "$value": "{color.danger.700}",  "$type": "color" },
-    "warning":    { "$value": "{color.warning.700}", "$type": "color" },
-    "info":       { "$value": "{color.info.700}",    "$type": "color" }
+    "primary": {
+      "$value": "{color.gray.900}",
+      "$type": "color",
+      "$description": "Default text color for body content and headings."
+    },
+    "secondary": {
+      "$value": "{color.gray.600}",
+      "$type": "color",
+      "$description": "Less prominent text — captions, supporting copy, secondary metadata."
+    },
+    "tertiary": {
+      "$value": "{color.gray.500}",
+      "$type": "color",
+      "$description": "Least prominent text — placeholders, hint text, low-emphasis labels."
+    },
+    "disabled": {
+      "$value": "{color.gray.400}",
+      "$type": "color",
+      "$description": "Text on disabled controls."
+    },
+    "inverse": {
+      "$value": "{color.gray.50}",
+      "$type": "color",
+      "$description": "Text on dark or inverse-themed surfaces."
+    },
+    "link": {
+      "$value": "{color.indigo.600}",
+      "$type": "color",
+      "$description": "Default link color."
+    },
+    "link-hover": {
+      "$value": "{color.indigo.700}",
+      "$type": "color",
+      "$description": "Link color in hover state."
+    },
+    "success": {
+      "$value": "{color.success.700}",
+      "$type": "color",
+      "$description": "Foreground for success-context text."
+    },
+    "danger": {
+      "$value": "{color.danger.700}",
+      "$type": "color",
+      "$description": "Foreground for error or destructive-context text."
+    },
+    "warning": {
+      "$value": "{color.warning.700}",
+      "$type": "color",
+      "$description": "Foreground for warning-context text."
+    },
+    "info": {
+      "$value": "{color.info.700}",
+      "$type": "color",
+      "$description": "Foreground for informational-context text."
+    }
   }
 }

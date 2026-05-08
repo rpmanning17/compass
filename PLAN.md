@@ -2,7 +2,7 @@
 
 **Status:** Active
 **Created:** May 1, 2026
-**Last updated:** May 1, 2026 (Phase 1 complete; removed GitHub mobile app per §8 deviation; hosting decision recorded — Vercel)
+**Last updated:** May 1, 2026 (Phase 2 complete: tokens layer + Style Dictionary v4 build pipeline; semantic alias layer included in scope)
 **Owner:** [Your name]
 **Source of truth hierarchy:** GitHub repo `PLAN.md` > Cowork project copy > Claude chat project copy > Google Drive backup
 
@@ -134,6 +134,7 @@ Each phase has: a goal, the tool(s) it happens in, inputs required, outputs prod
   - Running the build produces all expected output formats with no errors
   - Tokens are documented in `tokens/README.md`
   - At least one round of cross-check: Codex CLI reviews the token structure
+- **Status:** ✅ Complete (2026-05-01; semantic alias layer included in scope; two known limitations logged in §8)
 
 ### Phase 3: Reference components
 - **Tool:** Claude Code (terminal in VS Code), Codex CLI (parallel terminal in VS Code, or via Agent Sessions view if on 1.109+)
@@ -240,6 +241,15 @@ Record every foundational decision and every deviation from this plan. Format: d
 |------|-------|--------------|-----|
 | 2026-05-01 | Phase 1 | Removed GitHub mobile app references from Tool Inventory (§4), Tool Selection guidance (§5), Phase 1 outputs (§6), and Decisions Log (§8). | Original mobile-app entry was based on a misremembered conversation with Leann — Leann referenced GitHub Desktop, not mobile. Decided not to add Desktop in its place either; existing stack (Claude Code, Codex CLI, VS Code, terminal git) covers all needed git operations. |
 
+### Known limitations
+
+Implementation choices that work but are not the long-term ideal. Logged so they don't get lost; revisit when tooling or dependencies allow a cleaner approach.
+
+| Date | Phase | Limitation | Why it's accepted now | When to revisit |
+|------|-------|------------|------------------------|-----------------|
+| 2026-05-01 | Phase 2 | **DTCG 2025.10 object-shape compliance gap.** Token source files use string-form values (`"#F8FAFC"`, `"16px"`, `"150ms"`) rather than the latest DTCG object shapes (`{colorSpace, components, alpha}`, `{value, unit}`). | Pragmatic: string form is what Style Dictionary v4 and Tokens Studio actually consume in practice today. The strict 2025.10 object shapes are not yet well-supported by either tool. | When Style Dictionary and Tokens Studio both ship native support for the 2025.10 object shapes. Migration would touch every token file. |
+| 2026-05-01 | Phase 2 | **`surface.overlay` alias traceability.** `surface.overlay` is hardcoded as `rgba(15, 23, 42, 0.5)` rather than expressed as `{color.gray.900}` at 50% alpha. | DTCG has no clean way to express "alias-with-alpha" until a Style Dictionary transform is built that resolves alias-plus-alpha at build time. The current value is correct; only its conceptual link to `color.gray.900` is lost — if the gray palette shifts, this token won't follow. | When such a transform is built; small, scoped task. |
+
 ---
 
 ## 9. Document Maintenance
@@ -275,5 +285,6 @@ To keep this plan focused, the following are explicitly *not* included in Phases
 - Visual regression testing infrastructure
 - Design system documentation site beyond Storybook (e.g., a custom Next.js doc site)
 - GitHub Agent HQ setup (Tier 2 cross-checking) — defer until working with engineering teams at an actual employer
+- **Style Dictionary v5 migration** — Phase 2 pinned `style-dictionary@4.4.0` to preserve Codex's review environment. v5.x (currently `5.4.0` on npm) introduces breaking changes that need their own cross-check pass and tooling re-validation. Defer until the v4 build is stable and the broader system is established; treat as a scoped upgrade task with its own cross-check pass.
 
 These are good ideas but not foundational. Adding them now would slow the build of the core system.

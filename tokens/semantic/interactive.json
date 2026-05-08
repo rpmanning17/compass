@@ -1,12 +1,44 @@
 {
   "interactive": {
-    "primary-default": { "$value": "{color.indigo.500}", "$type": "color" },
-    "primary-hover":   { "$value": "{color.indigo.600}", "$type": "color" },
-    "primary-active":  { "$value": "{color.indigo.700}", "$type": "color" },
-    "primary-fg":      { "$value": "{color.gray.50}",    "$type": "color" },
-    "neutral-default": { "$value": "{color.gray.100}",   "$type": "color" },
-    "neutral-hover":   { "$value": "{color.gray.200}",   "$type": "color" },
-    "neutral-active":  { "$value": "{color.gray.300}",   "$type": "color" },
-    "neutral-fg":      { "$value": "{color.gray.900}",   "$type": "color" }
+    "primary-default": {
+      "$value": "{color.indigo.500}",
+      "$type": "color",
+      "$description": "Primary interactive surface — default/resting state."
+    },
+    "primary-hover": {
+      "$value": "{color.indigo.600}",
+      "$type": "color",
+      "$description": "Primary interactive surface — hover state."
+    },
+    "primary-active": {
+      "$value": "{color.indigo.700}",
+      "$type": "color",
+      "$description": "Primary interactive surface — active/pressed state."
+    },
+    "primary-fg": {
+      "$value": "{color.gray.50}",
+      "$type": "color",
+      "$description": "Foreground (text, icons) on primary interactive surfaces."
+    },
+    "neutral-default": {
+      "$value": "{color.gray.100}",
+      "$type": "color",
+      "$description": "Neutral interactive surface — default/resting state."
+    },
+    "neutral-hover": {
+      "$value": "{color.gray.200}",
+      "$type": "color",
+      "$description": "Neutral interactive surface — hover state."
+    },
+    "neutral-active": {
+      "$value": "{color.gray.300}",
+      "$type": "color",
+      "$description": "Neutral interactive surface — active/pressed state."
+    },
+    "neutral-fg": {
+      "$value": "{color.gray.900}",
+      "$type": "color",
+      "$description": "Foreground (text, icons) on neutral interactive surfaces."
+    }
   }
 }

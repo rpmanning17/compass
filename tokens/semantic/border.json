@@ -1,12 +1,44 @@
 {
   "border": {
-    "subtle":  { "$value": "{color.gray.100}",    "$type": "color" },
-    "default": { "$value": "{color.gray.200}",    "$type": "color" },
-    "strong":  { "$value": "{color.gray.300}",    "$type": "color" },
-    "focus":   { "$value": "{color.indigo.500}",  "$type": "color" },
-    "success": { "$value": "{color.success.500}", "$type": "color" },
-    "danger":  { "$value": "{color.danger.500}",  "$type": "color" },
-    "warning": { "$value": "{color.warning.500}", "$type": "color" },
-    "info":    { "$value": "{color.info.500}",    "$type": "color" }
+    "subtle": {
+      "$value": "{color.gray.100}",
+      "$type": "color",
+      "$description": "Least visible separator border."
+    },
+    "default": {
+      "$value": "{color.gray.200}",
+      "$type": "color",
+      "$description": "Default border — most common usage on inputs and cards."
+    },
+    "strong": {
+      "$value": "{color.gray.300}",
+      "$type": "color",
+      "$description": "Emphasized boundary — for active states or stronger separation."
+    },
+    "focus": {
+      "$value": "{color.indigo.500}",
+      "$type": "color",
+      "$description": "Focus ring color for interactive elements."
+    },
+    "success": {
+      "$value": "{color.success.500}",
+      "$type": "color",
+      "$description": "Status border for success-state inputs and cards."
+    },
+    "danger": {
+      "$value": "{color.danger.500}",
+      "$type": "color",
+      "$description": "Status border for error-state inputs and cards."
+    },
+    "warning": {
+      "$value": "{color.warning.500}",
+      "$type": "color",
+      "$description": "Status border for warning-state inputs and cards."
+    },
+    "info": {
+      "$value": "{color.info.500}",
+      "$type": "color",
+      "$description": "Status border for informational-state inputs and cards."
+    }
   }
 }

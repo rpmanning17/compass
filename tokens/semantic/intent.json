@@ -1,12 +1,44 @@
 {
   "intent": {
-    "success-bg": { "$value": "{color.success.50}",  "$type": "color" },
-    "success-fg": { "$value": "{color.success.700}", "$type": "color" },
-    "danger-bg":  { "$value": "{color.danger.50}",   "$type": "color" },
-    "danger-fg":  { "$value": "{color.danger.700}",  "$type": "color" },
-    "warning-bg": { "$value": "{color.warning.50}",  "$type": "color" },
-    "warning-fg": { "$value": "{color.warning.700}", "$type": "color" },
-    "info-bg":    { "$value": "{color.info.50}",     "$type": "color" },
-    "info-fg":    { "$value": "{color.info.700}",    "$type": "color" }
+    "success-bg": {
+      "$value": "{color.success.50}",
+      "$type": "color",
+      "$description": "Background fill for success-state containers (alerts, badges)."
+    },
+    "success-fg": {
+      "$value": "{color.success.700}",
+      "$type": "color",
+      "$description": "Foreground for success-state containers (text, icons)."
+    },
+    "danger-bg": {
+      "$value": "{color.danger.50}",
+      "$type": "color",
+      "$description": "Background fill for danger or error-state containers."
+    },
+    "danger-fg": {
+      "$value": "{color.danger.700}",
+      "$type": "color",
+      "$description": "Foreground for danger or error-state containers."
+    },
+    "warning-bg": {
+      "$value": "{color.warning.50}",
+      "$type": "color",
+      "$description": "Background fill for warning-state containers."
+    },
+    "warning-fg": {
+      "$value": "{color.warning.700}",
+      "$type": "color",
+      "$description": "Foreground for warning-state containers."
+    },
+    "info-bg": {
+      "$value": "{color.info.50}",
+      "$type": "color",
+      "$description": "Background fill for informational-state containers."
+    },
+    "info-fg": {
+      "$value": "{color.info.700}",
+      "$type": "color",
+      "$description": "Foreground for informational-state containers."
+    }
   }
 }
